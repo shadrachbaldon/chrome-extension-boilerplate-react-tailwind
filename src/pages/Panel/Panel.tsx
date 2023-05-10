@@ -3,7 +3,7 @@ import './Panel.css';
 
 const Panel: React.FC = () => {
   return (
-    <div className="container">
+    <div className="container text-xl">
       <h1>Dev Tools Panel</h1>
     </div>
   );

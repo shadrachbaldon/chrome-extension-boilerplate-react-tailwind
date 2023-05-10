@@ -11,7 +11,10 @@ var ReactRefreshTypeScript = require('react-refresh-typescript');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
-var alias = {};
+var alias = {
+  Pages: path.resolve(__dirname, 'src/pages/'),
+  Assets: path.resolve(__dirname, 'src/assets/'),
+};
 
 // load the secrets
 var secretsPath = path.join(__dirname, 'secrets.' + env.NODE_ENV + '.js');
@@ -69,10 +72,7 @@ var options = {
             loader: 'css-loader',
           },
           {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
+            loader: 'postcss-loader',
           },
         ],
       },
